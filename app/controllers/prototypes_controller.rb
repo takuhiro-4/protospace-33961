@@ -56,7 +56,7 @@ class PrototypesController < ApplicationController
   def abc
     @prototype = Prototype.find(params[:id])
     unless @prototype.user == current_user
-      redirect_to action: :index
+      redirect_to action: :new
     end
   end
 
